@@ -27,7 +27,7 @@ function createAccessibilityComponent() {
   // Create toggle button
   const toggleButton = document.createElement('button');
   const img = document.createElement('img');
-  img.src = './accessibility-icon.svg';
+  img.src = 'https://franklinbarto.github.io/web-disability-settings/accessibility-icon.svg';
   img.alt = 'Accessibility';
   toggleButton.appendChild(img);
 
@@ -411,7 +411,7 @@ const cssContent = `
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background: rgba(211, 212, 224, 0.9);
+    background: rgba(211, 212, 224, 0.9) !important;
     width: 100%;
     border-radius: 20px;
     border: 2px solid rgb(141, 173, 201);
@@ -419,7 +419,7 @@ const cssContent = `
 
 .accessibilityContainer .accessibilityMenu button{
     width: 85%;
-    background: #f2f2f9;
+    background: #f2f2f9 !important;;
     border: 2px solid #0C164F;
     border-radius: 5px;
     padding: 10px;
@@ -429,7 +429,7 @@ const cssContent = `
 }
 
 .accessibilityContainer .accessibilityMenu button.active{
-    background: #0C164F;
+    background: #0C164F !important;
     color: white;
 }
 `;
