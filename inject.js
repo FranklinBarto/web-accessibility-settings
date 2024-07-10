@@ -170,3 +170,269 @@ function Accessibility() {
 
 // Initialize the component
 Accessibility();
+
+
+// Styles
+
+function injectCSS(cssContent) {
+    const style = document.createElement('style');
+    style.textContent = cssContent;
+    document.head.appendChild(style);
+}
+
+// CSS content as a string
+const cssContent = `
+/* Remove Assets */
+.accessRemoveAssets img{
+    display: none !important;
+}
+
+.accessRemoveAssets video{
+    display: none !important;
+}
+
+.accessRemoveAssets ::after{
+    display: none !important;
+}
+
+.accessRemoveAssets ::before{
+    display: none !important;
+}
+
+.accessRemoveAssets .img{
+    display: none !important;
+}
+
+.accessRemoveAssets .img-fluid{
+    display: none !important;
+}
+
+/* Dark contrast */
+.accessDarkContrast div{
+    background-color: black !important;
+}
+.accessDarkContrast section{
+    background-color: black !important;
+}
+.accessDarkContrast nav{
+    background-color: black !important;
+}
+.accessDarkContrast main{
+    background-color: black !important;
+}
+.accessDarkContrast header{
+    background-color: black !important;
+}
+.accessDarkContrast footer{
+    background-color: black !important;
+}
+.accessDarkContrast time{
+    background-color: black !important;
+}
+.accessDarkContrast h1{
+    color: white !important;
+}
+.accessDarkContrast h2{
+    color: white !important;
+}
+.accessDarkContrast h3{
+    color: white !important;
+}
+.accessDarkContrast h4{
+    color: white !important;
+}
+.accessDarkContrast h5{
+    color: white !important;
+}
+.accessDarkContrast h6{
+    color: white !important;
+}
+.accessDarkContrast span{
+    color: white !important;
+}
+.accessDarkContrast p{
+    color: white !important;
+}
+.accessDarkContrast ul{
+    color: white !important;
+}
+.accessDarkContrast ol{
+    color: white !important;
+}
+.accessDarkContrast button{
+    color: white !important;
+}
+.accessDarkContrast .nav-link{
+    color: white !important;
+}
+.accessDarkContrast a{
+    color: white !important;
+}
+
+/* Light contrast */
+.accessLightContrast div{
+    background-color: white !important;
+}
+.accessLightContrast section{
+    background-color: white !important;
+}
+.accessLightContrast nav{
+    background-color: white !important;
+}
+.accessLightContrast main{
+    background-color: white !important;
+}
+.accessLightContrast header{
+    background-color: white !important;
+}
+.accessLightContrast footer{
+    background-color: white !important;
+}
+.accessLightContrast time{
+    background-color: white !important;
+}
+.accessLightContrast h1{
+    color: black !important;
+}
+.accessLightContrast h2{
+    color: black !important;
+}
+.accessLightContrast h3{
+    color: black !important;
+}
+.accessLightContrast h4{
+    color: black !important;
+}
+.accessLightContrast h5{
+    color: black !important;
+}
+.accessLightContrast h6{
+    color: black !important;
+}
+.accessLightContrast span{
+    color: black !important;
+}
+.accessLightContrast p{
+    color: black !important;
+}
+.accessLightContrast ul{
+    color: black !important;
+}
+.accessLightContrast ol{
+    color: black !important;
+}
+.accessLightContrast button{
+    color: black !important;
+}
+.accessLightContrast .nav-link{
+    color: black !important;
+}
+.accessLightContrast a{
+    color: black !important;
+}
+
+/* Font size */
+/* first size */
+.accessTextSize1 h1
+.accessTextSize1 h2,
+.accessTextSize1 h3,
+.accessTextSize1 p,
+.accessTextSize1 span,
+.accessTextSize1 a
+{
+    font-size: medium !important;
+}
+
+.accessTextSize2 h1
+.accessTextSize2 h2,
+.accessTextSize2 h3,
+.accessTextSize2 p,
+.accessTextSize2 span,
+.accessTextSize2 a
+{
+    font-size: large !important;
+
+}
+.accessTextSize3 h1
+.accessTextSize3 h2,
+.accessTextSize3 h3,
+.accessTextSize3 p,
+.accessTextSize3 span,
+.accessTextSize3 a{
+    font-size: x-large !important;
+}
+
+.accessTextSize4 h1
+.accessTextSize4 h2,
+.accessTextSize4 h3,
+.accessTextSize4 p,
+.accessTextSize4 span,
+.accessTextSize4 a{
+    font-size: xx-large !important;
+}
+
+/* Access panel */
+.accessibilityContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 10%;
+    right: 35px;
+    width: auto;
+    height: auto;
+    z-index: 1000;
+}
+
+.accessibilityContainer >button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 200ms;
+    transform: scale(1);
+    width: 65px;
+    margin: 10px 0 10px auto
+}
+
+.accessibilityContainer >button:hover{
+    transform: scale(1.1);
+}
+
+.accessibilityContainer >button:focus{
+    outline: none;
+}
+
+.accessibilityContainer >button img{
+    width: 100%;
+    display: flex !important;
+    outline: none;
+}
+
+.accessibilityContainer .accessibilityMenu{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: rgba(211, 212, 224, 0.9);
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid rgb(141, 173, 201);
+}
+
+.accessibilityContainer .accessibilityMenu button{
+    width: 85%;
+    background: #f2f2f9;
+    border: 2px solid #0C164F;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    color: #0C164F;
+    font-weight: bolder;
+}
+
+.accessibilityContainer .accessibilityMenu button.active{
+    background: #0C164F;
+    color: white;
+}
+`;
+
+// Inject the CSS
+injectCSS(cssContent);
