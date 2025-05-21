@@ -24,7 +24,7 @@ function createAccessibilityComponent() {
   const toggleButton = document.createElement("button");
   const img = document.createElement("img");
   img.src =
-    "https://franklinbarto.github.io/web-disability-settings/accessibility-icon.svg";
+    "https://franklinbarto.github.io/web-accessibility-settings/accessibility-icon.svg";
   img.alt = "Accessibility";
   toggleButton.appendChild(img);
 
